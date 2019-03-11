@@ -26,7 +26,7 @@ ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
 
 - `Main` 方法是可执行程序的入口点，也是程序控制开始和结束的位置。
 - `Main` 在类或结构中声明。 `Main` 必须是[静态](../../../csharp/language-reference/keywords/static.md)方法，不得为[公共](../../../csharp/language-reference/keywords/public.md)方法。 （在前面的示例中，它获得的是[私有](../../../csharp/language-reference/keywords/private.md)成员的默认访问权限）。封闭类或结构不一定要是静态的。
-- `Main` 可以具有 `void`、`int`，或者以 C# 7.1、`Task` 或 `Task<int>` 返回类型开头。
+- `Main` 可以以 `void`、`int`作为返回值类型，或者从 C# 7.1开始可以以`Task` 或 `Task<int>` 作为返回值类型。
 - 当且仅当 `Main` 返回 `Task` 或 `Task<int>` 时，`Main` 的声明可包括 [`async`](../../language-reference/keywords/async.md) 修饰符。 请注意，该操作可明确排除 `async void Main` 方法。
 - 使用或不使用包含命令行自变量的 `string[]` 参数声明 `Main` 方法都行。 使用 Visual Studio 创建 Windows 应用程序时，可以手动添加此形参，也可以使用 <xref:System.Environment> 类来获取命令行实参。 参数被读取为从零开始编制索引的命令行自变量。 与 C 和 C++ 不同，程序的名称不被视为第一个命令行自变量。
 
